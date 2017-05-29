@@ -9,6 +9,11 @@
       "version": "3.0.0"
     }
   },
+  "scripts": {
+    "release": ".\\batch\\release.bat",
+    "key": ".\\batch\\key.bat",
+    "clean": "tns platform remove android & npm cache clear & tns platform add android"
+  },
   "dependencies": {
     "@angular/animations": "~4.1.0",
     "@angular/common": "~4.1.0",
@@ -18,6 +23,8 @@
     "@angular/http": "~4.1.0",
     "@angular/platform-browser": "~4.1.0",
     "@angular/router": "~4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
     "nativescript-angular": "~3.0.0",
     "nativescript-theme-core": "~1.0.2",
     "reflect-metadata": "~0.1.8",
