@@ -4,15 +4,16 @@
 1. Lazy module loading: split app into modules and load on demand instead of up front (see app/pages/main/main.module.ts)
 2. SASS: transpile into CSS (ctrl + shift + B in VSCode)
 3. TSLint: Common formatting rules
-4. VSCode settings: BeautifyJS run on save, TSLint immediately, hide JS files when TS version exists, hide extra files
+4. VSCode settings: JS Beautify run on save, TSLint immediately, hide JS files when TS version exists, hide extra files
 5. Useful .gitignore (may want to uncomment .vscode after cloning)
 6. release script for android
 
 ## Set up
 
-1. Edit first seven lines of package.json
-2. Edit "app_name" and "title_activity_kimera" in app/App_Resources/Android/values/strings.xml and app/App_Resources/Android/values-v21/strings.xml 
-3. Edit mainfest -> application -> android:name on line 22 of app/App_Resources/Android/AndroidManifest.xml
+1. Install Beautify, Project Snippets, and TSLint extensions for VSCode
+2. Edit first seven lines of package.json
+3. Edit "app_name" and "title_activity_kimera" in app/App_Resources/Android/values/strings.xml and app/App_Resources/Android/values-v21/strings.xml 
+4. Edit mainfest -> application -> android:name on line 22 of app/App_Resources/Android/AndroidManifest.xml
 
 ## Running
 
@@ -32,4 +33,4 @@
 
 ## Known issues
 
-If you receive "Error: Duplicate resources", delete node_modules/semver/semver.broser.js.gz & node_modules/semver/semver.min.js.gz and clean: npm run clean
+If you receive "Error: Duplicate resources", delete node_modules/semver/semver.browser.js.gz & node_modules/semver/semver.min.js.gz and clean: npm run clean

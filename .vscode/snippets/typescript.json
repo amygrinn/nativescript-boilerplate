@@ -1,0 +1,44 @@
+{
+    "Component": {
+        "prefix": "component",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tmoduleId: module.id,",
+            "\ttemplateUrl: './${1:template}.component.html'",
+            "})",
+            "export class ${2:name}Component {",
+            "\t$0",
+            "}",
+            ""
+        ]
+    },
+    "Module": {
+        "prefix": "module",
+        "body": [
+            "import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';",
+            "import { NativeScriptRouterModule } from 'nativescript-angular/router';",
+            "import { NativeScriptModule } from 'nativescript-angular/nativescript.module';",
+            "",
+            "import { ${1:My}Component } from './main.component';",
+            "",
+            "export const routerConfig = [{",
+            "\tpath: '',",
+            "\tcomponent: ${1:My}Component",
+            "}];",
+            "",
+            "@NgModule({",
+            "\tschemas: [NO_ERRORS_SCHEMA],",
+            "\timports: [",
+            "\t\tNativeScriptModule,",
+            "\t\tNativeScriptRouterModule,",
+            "\t\tNativeScriptRouterModule.forChild(routerConfig)",
+            "],",
+            "\tdeclarations: [${1:My}Component]",
+            "})",
+            "export class ${1:My}Module { }",
+            "$0"
+        ]
+    }
+}
