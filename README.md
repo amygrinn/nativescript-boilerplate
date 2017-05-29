@@ -11,9 +11,11 @@
 ## Set up
 
 1. Install Beautify, Project Snippets, and TSLint extensions for VSCode
-2. Edit first seven lines of package.json
-3. Edit "app_name" and "title_activity_kimera" in app/App_Resources/Android/values/strings.xml and app/App_Resources/Android/values-v21/strings.xml 
-4. Edit mainfest -> application -> android:name on line 22 of app/App_Resources/Android/AndroidManifest.xml
+2. git clone https://github.com/tylergrinn/nativescript-boilerplate.git [PROJECT_NAME] & cd [PROJECT_NAME]
+3. git remote rename origin boilerplate
+4. Edit first seven lines of package.json
+5. Edit "app_name" and "title_activity_kimera" in app/App_Resources/Android/values/strings.xml and app/App_Resources/Android/values-v21/strings.xml 
+6. Edit mainfest -> application -> android:name on line 22 of app/App_Resources/Android/AndroidManifest.xml
 
 ## Running
 
@@ -34,3 +36,7 @@
 ## Known issues
 
 If you receive "Error: Duplicate resources", delete node_modules/semver/semver.browser.js.gz & node_modules/semver/semver.min.js.gz and clean: npm run clean
+
+## Stay up to date
+
+git pull boilerplate HEAD
