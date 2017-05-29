@@ -7,18 +7,15 @@ import { MainComponent } from './main.component';
 export const routerConfig = [{
     path: '',
     component: MainComponent
-}]
+}];
+
 @NgModule({
     schemas: [NO_ERRORS_SCHEMA],
     imports: [
         NativeScriptModule,
         NativeScriptRouterModule,
-        NativeScriptRouterModule.forChild(routerConfig),
+        NativeScriptRouterModule.forChild(routerConfig)
     ],
-    declarations: [
-        MainComponent
-    ]
+    declarations: [MainComponent]
 })
-export class MainModule {
-
-}
+export class MainModule { }

@@ -2,13 +2,19 @@
     "Component": {
         "prefix": "component",
         "body": [
+            "const TAG: string = '[${1:my}.component.ts] ';",
+            "",
             "import { Component } from '@angular/core';",
             "",
             "@Component({",
             "\tmoduleId: module.id,",
-            "\ttemplateUrl: './${1:template}.component.html'",
+            "\ttemplateUrl: './${1:my}.component.html'",
             "})",
-            "export class ${2:name}Component {",
+            "export class ${2:my}Component {",
+            "\tconstructor() {",
+            "\t\tconsole.log(TAG + 'created');",
+            "\t}",
+            "",
             "\t$0",
             "}",
             ""
@@ -17,6 +23,8 @@
     "Module": {
         "prefix": "module",
         "body": [
+            "const TAG: string = '[${1:my}.module.ts] ';",
+            "",
             "import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';",
             "import { NativeScriptRouterModule } from 'nativescript-angular/router';",
             "import { NativeScriptModule } from 'nativescript-angular/nativescript.module';",
