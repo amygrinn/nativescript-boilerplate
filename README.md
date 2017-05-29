@@ -40,3 +40,5 @@ If you receive "Error: Duplicate resources", delete node_modules/semver/semver.b
 ## Stay up to date
 
 git pull boilerplate HEAD
+
+WARNING: may cause conflicts, especially in app/pages/main folder
