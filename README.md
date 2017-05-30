@@ -10,28 +10,31 @@
 
 ## Set up
 
-1. Install Beautify, Project Snippets, and TSLint extensions for VSCode
-2. git clone https://github.com/tylergrinn/nativescript-boilerplate.git [PROJECT_NAME] & cd [PROJECT_NAME]
-3. git remote rename origin boilerplate
-4. Edit first seven lines of package.json
+1. Install [Visual Studio Code](https://code.visualstudio.com/), [git](https://git-scm.com/downloads), and [node](https://nodejs.org/en/download/)
+2. Open VS Code and click the extensions button (bottom icon on the sidebar)
+4. Install Beautify, Project Snippets, and TSLint extensions for VSCode
+5. press ctrl + \` (backtick) to open command line
+5. `git clone https://github.com/tylergrinn/nativescript-boilerplate.git [PROJECT_NAME] & cd [PROJECT_NAME]`
+3. `git remote rename origin boilerplate`
+4. Edit first seven lines of package.json. Make the 'id' of the app in the form of com.organization_name.app_name
 5. Edit "app_name" and "title_activity_kimera" in app/App_Resources/Android/values/strings.xml and app/App_Resources/Android/values-v21/strings.xml 
 6. Edit mainfest -> application -> android:name on line 22 of app/App_Resources/Android/AndroidManifest.xml
+7. `npm install -g nativescript`
+8. `tns doctor`
 
 ## Running
 
-1. npm install -g nativescript
-2. tns doctor
-3. tns run ios/android
+`tns run ios/android`
 
 ## Build and sign for play store (only works on windows)
 
 1. Add android build tools to your PATH variable (You can download tools only from developer.android.com)
-2. If you need a new key: npm run key
-3. npm run release
+2. If you need a new key: `npm run key`
+3. `npm run release`
 4. Release apk will be in platforms/android/build/outputs/apk
 5. Commit and tag with the version number before uploading to the play store
 5. Increase "version code" by 1 and edit the "version name" in app/App_Resources/Android/AndroidManifest.xml (lines 4 & 5) for next release
-6. Clean the project: npm run clean
+6. Clean the project: `npm run clean`
 
 ## Known issues
 
@@ -39,6 +42,6 @@ If you receive "Error: Duplicate resources", delete node_modules/semver/semver.b
 
 ## Stay up to date
 
-git pull boilerplate HEAD
+`git pull boilerplate HEAD`
 
 WARNING: may cause conflicts, especially in app/pages/main folder
