@@ -12,15 +12,16 @@
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/), [git](https://git-scm.com/downloads), and [node](https://nodejs.org/en/download/)
 2. Open VS Code and click the extensions button (bottom icon on the sidebar)
-4. Install Beautify, Project Snippets, and TSLint extensions for VSCode
-5. press ctrl + \` (backtick) to open command line
+3. Install Beautify, Project Snippets, and TSLint extensions for VSCode
+4. press ctrl + \` (backtick) to open command line
 5. `git clone https://github.com/tylergrinn/nativescript-boilerplate.git [PROJECT_NAME] & cd [PROJECT_NAME]`
-3. `git remote rename origin boilerplate`
-4. Edit first seven lines of package.json. Make the 'id' of the app in the form of com.organization_name.app_name
-5. Edit "app_name" and "title_activity_kimera" in app/App_Resources/Android/values/strings.xml and app/App_Resources/Android/values-v21/strings.xml 
-6. Edit mainfest -> application -> android:name on line 22 of app/App_Resources/Android/AndroidManifest.xml
-7. `npm install -g nativescript`
-8. `tns doctor`
+6. `git remote rename origin boilerplate`
+7. Edit first seven lines of package.json. Make the 'id' of the app in the form of com.organization_name.app_name
+8. Edit "app_name" and "title_activity_kimera" in app/App_Resources/Android/values/strings.xml and app/App_Resources/Android/values-v21/strings.xml 
+9. Edit mainfest -> application -> android:name on line 22 of app/App_Resources/Android/AndroidManifest.xml
+10. `npm install -g nativescript`
+11. `@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://www.nativescript.org/setup/win'))"`
+12. `tns doctor`
 
 ## Running
 
@@ -28,11 +29,10 @@
 
 ## Build and sign for play store (only works on windows)
 
-1. Add android build tools to your PATH variable (You can download tools only from developer.android.com)
-2. If you need a new key: `npm run key`
-3. `npm run release`
-4. Release apk will be in platforms/android/build/outputs/apk
-5. Commit and tag with the version number before uploading to the play store
+1. If you need a new key: `npm run key`
+2. `npm run release`
+3. Release apk will be in platforms/android/build/outputs/apk
+4. Commit and tag with the version number before uploading to the play store
 5. Increase "version code" by 1 and edit the "version name" in app/App_Resources/Android/AndroidManifest.xml (lines 4 & 5) for next release
 6. Clean the project: `npm run clean`
 
